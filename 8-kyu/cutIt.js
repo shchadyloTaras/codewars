@@ -15,10 +15,7 @@ cutIt(["codewars","javascript","java"]) should return ["code","java","java"]
 */
 
 
-function cutIt(arr){
+const cutIt = (arr) => {
     let minWord =  Math.min(...arr.map(({length}) => length));
-
-    return arr.map((item) => {
-        return item.substr(0, minWord);
-    });
-}
+    return arr.map((item) => item.substr(0, minWord));
+};
